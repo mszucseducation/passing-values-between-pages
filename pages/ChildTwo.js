@@ -1,9 +1,10 @@
-export default function ChildTwo({childToParent}) {
-    const data = "This is data from Child Component to the Parent Component."
+export default function ChildTwo({childParent}) {
+
+    const data = "This is data from child page to the parent page"
 
     return(
         <>
-            <button primary onClick={() => childToParent(data)}>Click Child To Parent</button>
+            <button onClick={() => childParent(data)}>Click Child to Parent</button>
         </>
     )
 }

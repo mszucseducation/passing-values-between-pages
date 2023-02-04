@@ -1,16 +1,19 @@
-import ChildTwo from './ChildTwo.js';
-import { useState } from 'react';
+import { useState } from "react"
+import ChildTwo from "./ChildTwo"
 
 export default function ParentTwo() {
+
     const [data, setData] = useState('');
 
-    const childToParent = (childdata) => {
-        setData(childdata);
+    const childtoParent = (childData) => {
+        setData(childData);
     }
+
     return(
         <>
-        {data}
-        <ChildTwo childToParent={childToParent}/>
+            {data}
+
+            <ChildTwo childParent={childtoParent}/>
         </>
     )
 }

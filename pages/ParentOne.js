@@ -5,14 +5,14 @@ export default function ParentOne() {
     const [data, setData] = useState("");
 
     const parentToChild = () => {
-        setData('This is the data from the parent component which I will pass to the child component')
+        setData('This is the data from the parent page which will be passed to child page')
     }
 
     return(
         <>
-        <ChildOne parentToChild={data}/>
+            <ChildOne parentToChild={data}/>
 
-        <button onClick={() => parentToChild()}>Click parent to child</button>
+            <button onClick={() => parentToChild()}>Click parent to child</button>
         </>
     )
 }
